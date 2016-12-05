@@ -82,8 +82,7 @@ class Gallery {
         if (id == this.currentPhotoId) {
             $currentPhoto.className = 'currentphoto';
             console.log($currentPhoto);
-            for(let i = 0; i != this.currentPhotoId; i++)
-            {
+            for (let i = 0; i != this.currentPhotoId; i++) {
                 let $restOfPhoto = document.getElementById(i);
                 $restOfPhoto.className = '';
             }
