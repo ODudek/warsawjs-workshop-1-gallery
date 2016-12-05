@@ -1,4 +1,4 @@
 # Simple gallery made in WarsawJS Workshop 1
 
 # TODO
-- [ ] previous button doesn't clear border 
+- [x] previous button doesn't clear border 

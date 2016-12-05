@@ -13,7 +13,6 @@ class Gallery {
         this.buildImagesArray();
         this.displayCurrentPhoto();
         this.setupClickListeners();
-        this.selectedPhoto();
     }
 
     buildImagesArray() {
@@ -50,7 +49,7 @@ class Gallery {
                 this.selectedPhoto(this.currentPhotoId);
             }
             catch (error) {
-                console.log('Nie wskazałeś obrazku: ', error.message);
+                console.log('Nie wskazałeś obrazka: ', error.message);
             }
         })
     }
@@ -81,14 +80,20 @@ class Gallery {
         let $currentPhoto = $allPhotos.item(this.currentPhotoId);
         if (id == this.currentPhotoId) {
             $currentPhoto.className = 'currentphoto';
-            console.log($currentPhoto);
-            for (let i = 0; i != this.currentPhotoId; i++) {
-                let $restOfPhoto = document.getElementById(i);
-                $restOfPhoto.className = '';
-            }
+            this.clearSelectedPhoto();
         }
     }
 
+    clearSelectedPhoto() {
+        for (let i = 0; i != this.currentPhotoId; i++) {
+            let $restOfPhoto = document.getElementById(i);
+            $restOfPhoto.className = '';
+        }
+        for (let j = 4; j != this.currentPhotoId; j--) {
+            let $restOfPhoto = document.getElementById(j);
+            $restOfPhoto.className = '';
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

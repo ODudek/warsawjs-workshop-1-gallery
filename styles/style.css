@@ -22,8 +22,8 @@ body {
     height: auto;
 }
 
-#navigation a {
-    text-decoration: none;
+#navigation button {
+    cursor: pointer;
 }
 
 .currentphoto {
