@@ -1,0 +1,31 @@
+body {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0;
+}
+
+#gallery {
+    width: 660px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#thumbs-gallery img {
+    width: 118px;
+    height: 70px;
+    cursor: pointer;
+}
+
+#current-photo-wrapper img {
+    width: 640px;
+    height: auto;
+}
+
+#navigation a {
+    text-decoration: none;
+}
+
+.currentphoto {
+    border: solid 4px #FF576B;
+}
